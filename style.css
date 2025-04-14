@@ -1,38 +1,56 @@
+/* Reset & Base */
 * {
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.3s ease;
 }
 
 body {
-  background-color: #f5f5f5;
   margin: 0;
   padding: 0;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding-top: 40px;
 }
 
+/* Container */
 .container {
+  background-color: #ffffff;
   max-width: 600px;
-  margin: 30px auto;
-  padding: 20px;
-  background-color: white;
-  border-radius: 8px;
-  border: 1px solid #ddd;
+  width: 90%;
+  padding: 25px 30px;
+  border-radius: 16px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
 }
 
+/* Header */
 h1 {
   text-align: center;
-  color: #333;
   margin-bottom: 20px;
+  color: #333;
+  font-size: 28px;
 }
 
-form input,
+/* Form Inputs */
+.vault-form input,
 #search {
   width: 100%;
-  padding: 10px;
-  margin: 6px 0;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 10px;
   border: 1px solid #ccc;
-  border-radius: 6px;
+  font-size: 16px;
 }
 
+.input-group input:focus {
+  border-color: #6a11cb;
+  outline: none;
+}
+
+/* Buttons */
 .actions {
   display: flex;
   gap: 10px;
@@ -41,48 +59,63 @@ form input,
 
 .actions button {
   flex: 1;
-  padding: 10px;
-  background-color: #007bff;
+  padding: 12px;
+  background: #6a11cb;
   color: white;
   border: none;
-  border-radius: 6px;
+  border-radius: 10px;
+  font-size: 16px;
   cursor: pointer;
 }
 
 .actions button:hover {
-  background-color: #0056b3;
+  background: #2575fc;
+}
+
+/* Entries */
+.entries-section {
+  margin-top: 20px;
 }
 
 .entry {
-  background-color: #f9f9f9;
-  padding: 12px;
-  border-left: 4px solid #007bff;
-  border-radius: 6px;
-  margin-top: 15px;
+  background-color: #f4f4f4;
+  padding: 15px;
+  border-left: 5px solid #6a11cb;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  position: relative;
 }
 
 .entry strong {
-  color: #007bff;
+  display: block;
+  font-size: 18px;
+  color: #6a11cb;
+  margin-bottom: 6px;
 }
 
 .entry input {
+  background: none;
   border: none;
-  background-color: transparent;
-  font-size: 14px;
+  font-size: 15px;
   color: #333;
   width: 70%;
+  margin-right: 10px;
+}
+
+.entry input:focus {
+  outline: none;
 }
 
 .entry button {
-  padding: 5px 10px;
-  margin-left: 5px;
-  background-color: #007bff;
-  color: white;
+  background-color: #6a11cb;
+  color: #fff;
   border: none;
-  border-radius: 4px;
+  padding: 6px 10px;
+  border-radius: 6px;
   cursor: pointer;
+  margin-left: 5px;
 }
 
 .entry button:hover {
-  background-color: #0056b3;
+  background-color: #2575fc;
 }
